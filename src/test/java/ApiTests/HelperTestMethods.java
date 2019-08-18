@@ -2,21 +2,29 @@ package ApiTests;
 
 import com.jayway.restassured.path.json.JsonPath;
 import com.jayway.restassured.response.Response;
-
+import org.testng.Assert;
 import java.util.*;
 
-import static org.junit.Assert.assertEquals;
 
 public class HelperTestMethods {
     //Verify the http response status returned. Check Status Code is 200?
     public void checkStatusIs200 (Response res) {
-        assertEquals("Status Check Failed!", 200, res.getStatusCode());
+        Assert.assertEquals(res.getStatusCode(),200,"Status Check Failed!");
     }
 
+    public void checkStatusIs400 (Response res) {
+        Assert.assertEquals(400, res.getStatusCode(),"Status Check Failed!");
+    }
+
+    public void checkStatusIs404 (Response res) {
+        Assert.assertEquals(404, res.getStatusCode(),"Status Check Failed!");
+    }
+
+
     //Get Video Ids (For use case-1)
-    public ArrayList getVideoIdList (JsonPath jp) {
-        ArrayList videoIdList = jp.get("items.id");
-        return videoIdList;
+    public ArrayList getPetList (JsonPath jp) {
+        ArrayList petIdList = jp.get("id");
+        return petIdList;
     }
 
     //Get Related Video Ids (For use case-2)

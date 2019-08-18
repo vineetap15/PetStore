@@ -1,0 +1,18 @@
+{
+    "id": "1",
+    "name": "vin",
+    "category":{
+         "id":"1",
+          "name":"vinee"
+  },
+     "photoUrls": [ 
+  "strings"
+  ],
+   "tags": [
+     {
+         "id":"1",
+          "name":"alk"
+  }
+   ],
+    "status": "available"
+  }
