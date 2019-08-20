@@ -1,16 +1,15 @@
 package utils;
 
+import static com.jayway.restassured.RestAssured.get;
+import static com.jayway.restassured.RestAssured.given;
+
 import com.jayway.restassured.RestAssured;
-import com.jayway.restassured.assertion.BodyMatcher;
 import com.jayway.restassured.http.ContentType;
 import com.jayway.restassured.path.json.JsonPath;
 import com.jayway.restassured.response.Response;
 
-import org.apache.http.HttpRequest;
-
 import utils.models.pet.CreatePet;
-
-import static com.jayway.restassured.RestAssured.*;
+import utils.models.user.CreateUser;
 
 public class Utils {
     //Global Setup Variables
@@ -19,7 +18,9 @@ public class Utils {
 
     //Sets Base URI
     public static void setBaseURI (){
-        RestAssured.baseURI = "https://petstore.swagger.io/v2/pet";
+        //RestAssured.baseURI = "https://petstore.swagger.io/v2/pet";
+        //RestAssured.baseURIDelete = "https://petstore.swagger.io/v2/pet";
+        RestAssured.baseURI = "https://petstore.swagger.io/v2/user/createWithList";
     }
 
     //Sets base path
@@ -57,6 +58,21 @@ public class Utils {
     public static Response getPetPostResponse(ContentType Type,CreatePet input){
         
         return given().contentType(Type).body(input).post();
+    }
+
+    public static Response getUserPostResponse(ContentType Type,CreateUser input){
+        
+        return given().contentType(Type).body(input).post();
+    }
+
+    public static Response getPetPutResponse(ContentType Type,CreatePet input){
+        
+        return given().contentType(Type).body(input).put();
+    }
+
+    public static Response getPetDeleteResponse(ContentType Type){
+        
+        return given().contentType(Type).delete(RestAssured.basePath);
     }
 
     //Created search query path

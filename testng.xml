@@ -9,7 +9,7 @@
 	
 	<test name="apiresponse test">
 		<classes>
-			<class name="ApiTests.PostApis.Pet" />
+			<class name="ApiTests.PostApis.User" />
 		</classes>
 		
 	</test>
