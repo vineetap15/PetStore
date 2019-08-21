@@ -18,9 +18,9 @@ public class Utils {
 
     //Sets Base URI
     public static void setBaseURI (){
-        //RestAssured.baseURI = "https://petstore.swagger.io/v2/pet";
+        RestAssured.baseURI = "https://petstore.swagger.io/v2/pet/";
         //RestAssured.baseURIDelete = "https://petstore.swagger.io/v2/pet";
-        RestAssured.baseURI = "https://petstore.swagger.io/v2/user/createWithList";
+        //RestAssured.baseURI = "https://petstore.swagger.io/v2/user/createWithList";
     }
 
     //Sets base path

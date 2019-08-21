@@ -33,17 +33,17 @@ public void the_user_has_POST_api_of_pet() throws Throwable {
 
 @When("^the user enters the pet details$")
 public void the_user_enters_the_pet_details() throws Throwable {
-    createPet.setId(101);
+    createPet.setId(1101);
 
         ObjectMapper mp = new ObjectMapper();
         Category ct = mp.convertValue(PetData.categoryData(), Category.class);
         Tag tag = mp.convertValue(PetData.tagData(), Tag.class);
 
         createPet.setCategory(ct);
-        createPet.setName("jackie");
+        createPet.setName("tackie");
         ArrayList<String> photoUrls = new ArrayList<String>();
-        photoUrls.add("photo1");
-        photoUrls.add("photo2");
+        photoUrls.add("photoe");
+        photoUrls.add("photol");
         createPet.setPhotoUrls(photoUrls);
 
         ArrayList<Tag> tags = new ArrayList<Tag>();

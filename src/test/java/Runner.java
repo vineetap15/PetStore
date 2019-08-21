@@ -5,7 +5,7 @@ import cucumber.api.testng.AbstractTestNGCucumberTests;
     features = "src/test/resources/features",
     monochrome = true,
     format = {"pretty","json:target/cucumber-report/cucumber.json"},
-    tags = {"@UpdatePet"},
+    tags = {"@pet,@GetPet,@UpdatePet,~@DeletePet"},
     glue = "ApiTests.Steps"
 )
 

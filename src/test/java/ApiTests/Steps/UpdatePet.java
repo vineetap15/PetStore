@@ -37,7 +37,7 @@ public void the_user_has_PUT_api_of_pet() throws Throwable {
 
 @When("^the user enters the new pet details$")
 public void the_user_enters_the_new_pet_details() throws Throwable {
-    createPet.setId(101);
+    createPet.setId(1101);
 
         ObjectMapper mp = new ObjectMapper();
         Category ct = mp.convertValue(PetData.categoryData(), Category.class);
@@ -57,8 +57,8 @@ public void the_user_enters_the_new_pet_details() throws Throwable {
    
 }
 
-@When("^the user hits the api$")
-public void the_user_hits_the_api() throws Throwable {
+@When("^the user hits the put api$")
+public void the_user_hits_the_put_api() throws Throwable {
     res = Utils.getPetPutResponse(ContentType.JSON, createPet); // get put reponse
     Utils.getJsonPath(res); 
 }
