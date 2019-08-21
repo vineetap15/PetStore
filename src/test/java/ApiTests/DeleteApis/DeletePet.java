@@ -24,7 +24,7 @@ public class DeletePet {
         Response res = null; //Response
 
         Utils.setBaseURI();
-        Utils.setBasePath("/10");
+        Utils.setBasePath("10");
         Utils.getPetDeleteResponse(ContentType.JSON);
 
     }
