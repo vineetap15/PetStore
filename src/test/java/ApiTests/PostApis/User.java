@@ -1,4 +1,4 @@
-package ApiTests.PostApis;
+package ApiTests.postApis;
 
 import static utils.Utils.getUserPostResponse;
 

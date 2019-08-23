@@ -18,7 +18,7 @@ public class Utils {
 
     //Sets Base URI
     public static void setBaseURI (){
-        RestAssured.baseURI = "https://petstore.swagger.io/v2/pet/";
+        RestAssured.baseURI = "https://petstore.swagger.io/v2/pet";
         //RestAssured.baseURIDelete = "https://petstore.swagger.io/v2/pet";
         //RestAssured.baseURI = "https://petstore.swagger.io/v2/user/createWithList";
     }
@@ -72,7 +72,7 @@ public class Utils {
 
     public static Response getPetDeleteResponse(ContentType Type){
         
-        return given().contentType(Type).delete(RestAssured.basePath);
+        return given().contentType(Type).delete(jsonPathTerm);
     }
 
     //Created search query path

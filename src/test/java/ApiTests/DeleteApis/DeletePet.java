@@ -1,4 +1,4 @@
-package ApiTests.DeleteApis;
+package ApiTests.deleteApis;
 
 import com.jayway.restassured.http.ContentType;
 import com.jayway.restassured.path.json.JsonPath;
@@ -24,7 +24,8 @@ public class DeletePet {
         Response res = null; //Response
 
         Utils.setBaseURI();
-        Utils.setBasePath("10");
+        //Utils.setBasePath("10");
+        Utils.setJsonPathTerm("/100");
         Utils.getPetDeleteResponse(ContentType.JSON);
 
     }

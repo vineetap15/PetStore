@@ -5,8 +5,11 @@ import cucumber.api.testng.AbstractTestNGCucumberTests;
     features = "src/test/resources/features",
     monochrome = true,
     format = {"pretty","json:target/cucumber-report/cucumber.json"},
-    tags = {"@pet,@GetPet,@UpdatePet,~@DeletePet"},
-    glue = "ApiTests.Steps"
+    //tags = {"@GetPet"},
+    //tags = {"@UpdatePet"},
+    //tags = {"@DeletePet"},
+    tags = {"@pet,@GetPet,@UpdatePet,@DeletePet"},
+    glue = "ApiTests.steps.pets"
 )
 
 public class Runner extends AbstractTestNGCucumberTests {

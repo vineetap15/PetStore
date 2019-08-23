@@ -1,4 +1,4 @@
-package ApiTests.PutApis;
+package ApiTests.putApis;
 
 import java.util.ArrayList;
 

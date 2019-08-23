@@ -1,4 +1,4 @@
-package ApiTests.Steps;
+package ApiTests.steps.pets;
 
 import com.jayway.restassured.http.ContentType;
 import com.jayway.restassured.response.Response;
@@ -29,7 +29,7 @@ public void the_user_has_GET_api_of_pet() throws Throwable {
 
 @When("^the user hits the GET api$")
 public void the_user_hits_the_GET_api() throws Throwable {
-    res = Utils.getResponse("2");
+    res = Utils.getResponse("/2");
     Utils.getJsonPath(res);
 }
 
