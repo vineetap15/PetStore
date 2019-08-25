@@ -1,4 +1,4 @@
-package ApiTests.GetApis;
+package ApiTests.getApis;
 
 import utils.Utils;
 import com.jayway.restassured.http.ContentType;

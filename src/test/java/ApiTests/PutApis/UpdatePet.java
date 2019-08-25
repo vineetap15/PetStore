@@ -1,4 +1,4 @@
-package ApiTests.postApis;
+package ApiTests.putApis;
 
 import java.util.ArrayList;
 
@@ -17,7 +17,7 @@ import utils.models.pet.CreatePet;
 import utils.models.pet.PetData;
 import utils.models.pet.Tag;
 
-public class Pet {
+public class UpdatePet {
 
     private static Response res = null; // Response
     // Instantiate a Helper Test Methods (htm) Object
@@ -45,7 +45,7 @@ public class Pet {
         ArrayList<Tag> tags = new ArrayList<Tag>();
         tags.add(tag);
         createPet.setTags(tags);
-        createPet.setStatus("available");
+        createPet.setStatus("pending");
 
         // Test Setup
         Utils.setBaseURI(); // Setup Base URI
