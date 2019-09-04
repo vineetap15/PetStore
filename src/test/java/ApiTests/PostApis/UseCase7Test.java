@@ -2,9 +2,9 @@
 
 
 // import utils.Utils;
-// import com.jayway.restassured.http.ContentType;
-// import com.jayway.restassured.path.json.JsonPath;
-// import com.jayway.restassured.response.Response;
+// import io.restassured.http.ContentType;
+// import io.restassured.path.json.JsonPath;
+// import io.restassured.response.Response;
 // import org.hamcrest.Matchers;
 // import static org.hamcrest.MatcherAssert.assertThat;
 
