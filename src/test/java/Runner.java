@@ -2,14 +2,14 @@ import cucumber.api.*;
 import cucumber.api.testng.AbstractTestNGCucumberTests;
 
 @CucumberOptions (
-    features = "src/test/resources/features",
+    features = "src/test/resources/features/pet/CreateAndValidatePet.feature",
     monochrome = true,
     format = {"pretty","json:target/cucumber-report/cucumber.json"},
-    //tags = {"@GetPet"},
+    // tags = {"@pet"},
     //tags = {"@UpdatePet"},
     //tags = {"@DeletePet"},
-    tags = {"@pet,@GetPet,@UpdatePet,@DeletePet"},
-    glue = "ApiTests.steps.pets"
+    //tags = {"@Createpet,@GetPet,@UpdatePet,@DeletePet"},
+    glue = "e2e.steps.pets"
 )
 
 public class Runner extends AbstractTestNGCucumberTests {
